@@ -28,7 +28,7 @@ const NavContent = () => {
               href={item.route}
               className={`${
                 isActive
-                  ? "brand-gradient rounded-lg text-light-900"
+                  ? "brand-gradient text-light-900 rounded-lg"
                   : "text-neutral-500"
               } flex items-center justify-start gap-4 bg-transparent p-4`}
             >

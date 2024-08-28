@@ -12,6 +12,7 @@ import {
 
 function Hero() {
   const { theme } = useTheme();
+  // eslint-disable-next-line no-unused-vars
   const [select, setSelect] = useState<string | null>(null);
   const onSelectChange = (value: string) => {
     setSelect(value);

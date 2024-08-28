@@ -1,4 +1,4 @@
-import { SidebarLink } from "@/frontend/types";
+import { SidebarLink } from "@/types";
 
 export const sidebarLinks: SidebarLink[] = [
   {
