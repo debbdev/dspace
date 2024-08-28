@@ -22,8 +22,8 @@ function Courses({ courses, title }: CourseListProps) {
     <section className="bg-neutral-200 pb-12 pt-10">
       <div className=" mx-auto max-w-screen-sm sm:max-w-screen-sm lg:max-w-screen-2xl">
         <div className="flex-between pb-2">
-          <h2>{title}</h2>
-          <button>see All</button>
+          <h2 className="font-bold">{title}</h2>
+          <button className="text-gray-600">see All</button>
         </div>
         <div className="flex-between gap-4">
           {courses.map((course) => (
@@ -47,36 +47,49 @@ function Courses({ courses, title }: CourseListProps) {
                 />
               </video>
               <div className="flex-between">
-                <Image
-                  src="/assets/icons/users.svg"
-                  width={10}
-                  height={10}
-                  alt="students"
-                />
-                <p>{course.studentTotal}</p>
-                <Image
-                  src="/assets/icons/users.svg"
-                  width={10}
-                  height={10}
-                  alt="students"
-                />
+                <div className="flex-start gap-2">
+                  <Image
+                    src="/assets/icons/users.svg"
+                    width={10}
+                    height={10}
+                    alt="students"
+                    className="icon-color"
+                  />
+                  <p>{course.studentTotal}</p>
+                </div>
+                <div>
+                  <Image
+                    src="/assets/icons/dots.svg"
+                    width={15}
+                    height={15}
+                    alt="students"
+                    className="invert-colors"
+                  />
+                </div>
               </div>
               <div className="">
-                <h2>{course.description}</h2>
+                <h2 className="text-lg font-bold">{course.description}</h2>
               </div>
               <div className="">
-                <h2>{course.category}</h2>
+                <h2 className="text-base">{course.category}</h2>
               </div>
               <div className="flex-between">
-                <h4>By {course.author}</h4>{" "}
+                <span>
+                  By {""}
+                  <span className="text-base font-bold">{course.author}</span>
+                </span>
                 <Image
                   src="/assets/icons/users.svg"
                   width={10}
                   height={10}
                   alt="students"
                 />{" "}
-                <h4>{course.oldPrice}</h4>
-                <h4>{course.newPrice}</h4>
+                <h4 className="text-base font-bold text-gray-500 line-through">
+                  {course.oldPrice}
+                </h4>
+                <h4 className="text-base font-bold text-red-500">
+                  {course.newPrice}
+                </h4>
               </div>
             </div>
           ))}

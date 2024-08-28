@@ -48,10 +48,10 @@ function Hero() {
         <div className=" text-dark100_light900 flex h-10 w-full items-center py-2 sm:w-full lg:w-[25rem]">
           <div className="bg-primary-500 flex size-10 items-center justify-center rounded-l-md rounded-r-none">
             <Image
-              src="assets/icons/search.svg"
+              src="assets/icons/gift.svg"
               alt="search"
-              width={16}
-              height={16}
+              width={18}
+              height={18}
               className="icon-color"
             />
           </div>
