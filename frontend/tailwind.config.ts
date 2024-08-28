@@ -58,8 +58,8 @@ const config: Config = {
         "about-hero": "url('/assets/images/about.png')",
         "contact-hero": "url('/assets/images/contact.jpg')",
         "privacy-hero": "url('/assets/images/privacy.jpg')",
-        "background-mine": "url('/assets/images/bg4.png')",
-        "background-discover": "url('/assets/images/bg3.jpg')",
+        "bundle-hero": "url('/assets/images/bundle.png')",
+        "explore-hero": "url('/assets/images/explore.png')",
       },
       screens: {
         xs: "420px",
