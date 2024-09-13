@@ -1,266 +1,30 @@
 import React from "react";
 import Courses from "@/components/Shared/Courses";
+import { allCourses } from "@/constants";
+import { AllCourses } from "@/types";
 
-function page() {
-  const newCourses = [
-    {
-      id: 1,
-      title: "New Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
+function Page() {
+  const groupedCourses = allCourses.reduce(
+    (acc, course) => {
+      course.category.forEach((cat) => {
+        const collection = cat.collection;
+        if (!acc[collection]) {
+          acc[collection] = [];
+        }
+        acc[collection].push(course);
+      });
+      return acc;
     },
-    {
-      id: 2,
-      title: "New Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 3,
-      title: "New Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 4,
-      title: "New Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 5,
-      title: "New Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-  ];
+    {} as Record<string, AllCourses[]>
+  );
 
-  const featuredCourses = [
-    {
-      id: 1,
-      title: "Featured Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 2,
-      title: "Featured Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 3,
-      title: "Featured Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 4,
-      title: "Featured Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 5,
-      title: "Featured Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-  ];
-
-  const courseBundles = [
-    {
-      id: 1,
-      title: "Course Bundles",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 2,
-      title: "Course Bundles",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 3,
-      title: "Course Bundles",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 4,
-      title: "Course Bundles",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 5,
-      title: "Course Bundles",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-  ];
-
-  const popularCourses = [
-    {
-      id: 1,
-      title: "Popular Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 2,
-      title: "Popular Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 3,
-      title: "Popular Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 4,
-      title: "Popular Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-    {
-      id: 5,
-      title: "Popular Courses",
-      description: "3D Modelling and Animation with Blender",
-      category: "3D Modeling",
-      image: "/images/new-course-1.jpg",
-      videoSrc: "/videos/video.mp4",
-      studentTotal: "24",
-      author: "Zainat Lincoln",
-      oldPrice: "10,950",
-      newPrice: "5,550",
-    },
-  ];
   return (
     <>
-      <Courses courses={newCourses} title="New Courses" />
-      <Courses courses={courseBundles} title="Course Bundles" />
-      <Courses courses={featuredCourses} title="Featured Courses" />
-      <Courses courses={popularCourses} title="Popular Courses" />
+      {Object.entries(groupedCourses).map(([collection, courses], index) => (
+        <Courses key={index} courses={courses} title={collection} />
+      ))}
     </>
   );
 }
 
-export default page;
+export default Page;

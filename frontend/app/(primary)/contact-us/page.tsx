@@ -42,11 +42,11 @@ const Page: React.FC = () => {
   }, [sent]);
   return (
     <section className="">
-      <div className="mx-auto max-w-screen-sm py-5 sm:max-w-screen-sm lg:max-w-screen-lg">
+      <div className="mx-auto max-w-screen-sm py-5 pl-16 sm:max-w-screen-sm sm:pl-16 lg:max-w-screen-lg lg:pl-0">
         <h1 className="h2-bold">Contact Us</h1>
       </div>
-      <div className="mx-auto flex max-w-screen-sm justify-between py-10 align-top sm:max-w-screen-sm lg:max-w-screen-lg">
-        <div className="h-full">
+      <div className="mx-auto flex max-w-screen-sm flex-wrap justify-between py-10 align-top sm:max-w-screen-sm lg:max-w-screen-lg">
+        <div className="h-full px-16 sm:px-16 lg:px-0">
           <Image
             src="/assets/images/contact1.jpg"
             width={500}
@@ -54,12 +54,12 @@ const Page: React.FC = () => {
             alt="group manager"
           />
         </div>
-        <div className="flex flex-col ">
-          <div className="mb-5 h-auto w-96 rounded-md border bg-white p-5">
+        <div className="flex flex-col pl-16 pt-5 sm:pl-16 sm:pt-5 lg:pl-0 lg:pt-0">
+          <div className="mb-5 h-auto w-[23.5rem] rounded-md border bg-white p-5 sm:w-[23.5rem] lg:w-96">
             <h2 className="h2-semibold">Get in Touch with Us</h2>
             <p>We are a click away</p>
           </div>
-          <div className="text-dark100_light900 background-light900_dark200 h-auto w-96 rounded-md border bg-white p-5">
+          <div className="text-dark100_light900 background-light900_dark200 h-auto w-[23.5rem] rounded-md border bg-white p-5 sm:w-[23.5rem] lg:w-96">
             <form onSubmit={handleSubmit} className="mt-4">
               <div className="text-dark100_light900 background-light900_dark200 mb-4">
                 <label htmlFor="form-name">Name</label>
@@ -94,7 +94,7 @@ const Page: React.FC = () => {
                 />
               </div>
               <button
-                className="brand-gradient mx-auto rounded px-6 py-3 text-center text-white"
+                className="brand-gradient container rounded px-6 py-3 text-white"
                 type="submit"
               >
                 Send

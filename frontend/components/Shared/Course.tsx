@@ -5,18 +5,17 @@ import Link from "next/link";
 
 type CourseListProps = {
   courses: AllCourses[];
-  title: string;
 };
-function Courses({ courses, title }: CourseListProps) {
+function Course({ courses }: CourseListProps) {
   return (
-    <section className="bg-neutral-200 pb-12 pt-10">
+    <section className=" bg-neutral-200 py-32">
       <div className=" mx-auto max-w-screen-sm sm:max-w-screen-sm lg:max-w-screen-2xl">
-        <div className="flex-between  px-5 pb-2 sm:px-5 lg:px-2">
+        {/* <div className="flex-between  px-5 pb-2 sm:px-5 lg:px-2">
           <h2 className="font-bold">{title}</h2>
-          <Link href={`/courses/collection/${title}`}>
+          <Link href={`/courses/${title}`}>
             <button className="text-gray-600">see All</button>
           </Link>
-        </div>
+        </div> */}
         <div className="flex max-w-screen-sm flex-wrap items-center justify-center gap-4 px-4 sm:max-w-screen-sm sm:justify-center sm:px-4 lg:max-w-screen-2xl lg:justify-between lg:px-0">
           {courses.map((course) => (
             <div
@@ -65,7 +64,7 @@ function Courses({ courses, title }: CourseListProps) {
                 <h2 className="text-lg font-bold">{course.description}</h2>
               </div>
               {course.category.map((item) => (
-                <Link href={`/courses/category/${item.title}`} key={item.id}>
+                <Link key={item.id} href={`/courses/category/${item.title}`}>
                   <div className="">
                     <h2>{item.title}</h2>
                   </div>
@@ -99,4 +98,4 @@ function Courses({ courses, title }: CourseListProps) {
   );
 }
 
-export default Courses;
+export default Course;

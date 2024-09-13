@@ -56,12 +56,12 @@ function Hero() {
       className={`${theme === "light" ? "text-light-900 bg-neutral-700" : "text-light-900 bg-neutral-600"} ${bgImage} h-96 w-full bg-cover bg-center bg-no-repeat pb-16 pt-24 bg-blend-multiply max-sm:h-full  lg:h-[26rem]`}
     >
       {heading && (
-        <h1 className="pl-5  text-3xl font-bold max-sm:w-60 sm:w-full sm:pl-10 sm:pr-40 sm:text-3xl lg:w-[45rem] lg:pl-[10.8rem] lg:pr-32 lg:text-5xl">
+        <h1 className="max-w-screen-sm  pl-5 pr-20 pt-0 text-3xl font-bold sm:max-w-screen-sm sm:pl-10 sm:pr-20 sm:pt-0 sm:text-3xl lg:max-w-screen-sm lg:pl-32 lg:pr-0 lg:pt-10 lg:text-5xl">
           {heading}
         </h1>
       )}
       {header && (
-        <p className="w-full pl-5 pt-2 text-base sm:pl-10 lg:pl-[10.8rem]">
+        <p className="max-w-screen-sm pl-5 pt-2 text-base sm:max-w-screen-sm sm:pl-10 lg:max-w-screen-lg lg:pl-32">
           {header}
         </p>
       )}
@@ -86,7 +86,7 @@ function Hero() {
               />
             </div>
 
-            <div className=" text-dark100_light900 flex h-10 w-full items-center py-2 sm:w-full lg:w-[25rem]">
+            <div className=" text-dark100_light900 flex-between h-10 w-full py-2 sm:w-full lg:w-[27rem]">
               <div className="bg-primary-500 flex size-10 items-center justify-center rounded-l-md rounded-r-none">
                 <Image
                   src="assets/icons/gift.svg"
@@ -100,7 +100,7 @@ function Hero() {
               <Select onValueChange={onSelectChange}>
                 <SelectTrigger
                   id="framework"
-                  className="text-dark100_light900 background-light800_dark300 w-96 rounded-none border-none focus:outline-none max-sm:w-full sm:w-96 lg:w-96"
+                  className="text-dark100_light900 background-light800_dark300 rounded-none border-none focus:outline-none"
                 >
                   <SelectValue
                     placeholder="AI"
@@ -120,15 +120,14 @@ function Hero() {
                 </SelectContent>
               </Select>
             </div>
-            <button className="bg-primary-500 mt-2 h-10 w-full rounded-md px-5 py-2 sm:w-full lg:mt-0 lg:w-60">
+            <button className="bg-primary-500 mt-2 h-10 w-full rounded-md px-5 py-2 sm:w-full lg:mt-0 lg:w-64">
               Search
             </button>
           </div>
 
-          <p className="w-full pl-5 pt-2 text-base sm:pl-10 lg:pl-[10.8rem]">
-            Popular Search :{" "}
-            <span>
-              {" "}
+          <p className=" w-full pl-5 pt-2 text-base sm:pl-10 lg:pl-[10.8rem]">
+            Popular Search :
+            <span className="">
               Data Analysis, Photoshop, Graphic Design, Web Development, Digital
               Marketing
             </span>

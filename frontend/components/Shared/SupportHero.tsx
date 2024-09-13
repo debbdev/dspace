@@ -46,14 +46,14 @@ function SupportHero() {
 
   return (
     <section
-      className={`${theme === "light" ? "text-light-900 bg-neutral-700" : "text-light-900 bg-neutral-600"} ${backgroundClass} h-96 w-full bg-cover bg-center bg-no-repeat pb-16 pt-24 bg-blend-multiply max-sm:h-full lg:h-[26rem]`}
+      className={`${theme === "light" ? "text-light-900 bg-neutral-700" : "text-light-900 bg-neutral-600"} ${backgroundClass} h-96 w-full bg-cover bg-center bg-no-repeat pb-16 pt-24 bg-blend-multiply max-sm:h-full lg:h-[26rem] `}
     >
-      <div className="container mx-auto">
-        <h1 className="mx-auto max-w-screen-sm py-2 text-3xl font-bold sm:max-w-screen-sm lg:max-w-screen-sm">
+      <div className="mx-auto max-w-screen-sm px-16 sm:max-w-screen-sm sm:px-16 lg:max-w-screen-lg lg:px-0">
+        <h1 className=" max-w-screen-sm py-2 text-3xl font-bold sm:max-w-screen-sm lg:max-w-screen-sm">
           {header}
         </h1>
-        <hr className="ml-[22rem] w-44" />
-        <p className="mx-auto max-w-screen-sm pt-2 text-base sm:max-w-screen-sm lg:max-w-screen-sm">
+        <hr className=" max-w-screen-sm sm:max-w-screen-sm lg:max-w-screen-sm" />
+        <p className=" max-w-screen-sm pt-2 text-base sm:max-w-screen-sm lg:max-w-screen-sm">
           {text}
         </p>
       </div>

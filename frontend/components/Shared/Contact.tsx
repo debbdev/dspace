@@ -43,54 +43,56 @@ const Contact: React.FC = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="mt-4">
-        <div className="text-dark100_light900 background-light900_dark200 mb-4">
-          <label htmlFor="form-name">Name</label>
-          <input
-            id="form-name"
-            autoComplete="name"
-            maxLength={50}
-            name="name"
-            className="text-dark100_light900 background-light900_dark200 mt-1 block w-full border p-2"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="form-email">Email</label>
-          <input
-            id="form-email"
-            required
-            autoComplete="email"
-            maxLength={80}
-            name="email"
-            type="email"
-            className="text-dark100_light900 background-light900_dark200 mt-1 block w-full border p-2"
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="form-message">Message</label>
-          <textarea
-            id="form-message"
-            required
-            name="message"
-            rows={5}
-            className="text-dark100_light900 background-light900_dark200 mt-1 block w-full border p-2"
-          />
-        </div>
-        <button
-          className="brand-gradient mx-auto rounded px-6 py-3 text-center text-white"
-          type="submit"
-        >
-          Send
-        </button>
-      </form>
+      <div className="mx-auto max-w-screen-sm bg-red-600 sm:max-w-screen-sm lg:max-w-screen-2xl">
+        <form onSubmit={handleSubmit} className="mt-4">
+          <div className="text-dark100_light900 background-light900_dark200 mb-4">
+            <label htmlFor="form-name">Name</label>
+            <input
+              id="form-name"
+              autoComplete="name"
+              maxLength={50}
+              name="name"
+              className="text-dark100_light900 background-light900_dark200 mt-1 block w-full border p-2"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="form-email">Email</label>
+            <input
+              id="form-email"
+              required
+              autoComplete="email"
+              maxLength={80}
+              name="email"
+              type="email"
+              className="text-dark100_light900 background-light900_dark200 mt-1 block w-full border p-2"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="form-message">Message</label>
+            <textarea
+              id="form-message"
+              required
+              name="message"
+              rows={5}
+              className="text-dark100_light900 background-light900_dark200 mt-1 block w-full border p-2"
+            />
+          </div>
+          <button
+            className="brand-gradient mx-auto rounded px-6 py-3 text-center text-white"
+            type="submit"
+          >
+            Send
+          </button>
+        </form>
 
-      {sent && (
-        <Dialog open={true}>
-          <DialogContent>
-            <p className="text-dark100_light900">{dialogMessage}</p>
-          </DialogContent>
-        </Dialog>
-      )}
+        {sent && (
+          <Dialog open={true}>
+            <DialogContent>
+              <p className="text-dark100_light900">{dialogMessage}</p>
+            </DialogContent>
+          </Dialog>
+        )}
+      </div>
     </>
   );
 };

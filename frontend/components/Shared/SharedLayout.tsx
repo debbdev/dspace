@@ -54,11 +54,11 @@ function SharedLayout() {
 
   return (
     <section className="">
-      <div className="mx-auto max-w-screen-sm py-5 sm:max-w-screen-sm lg:max-w-screen-lg">
-        <h1 className="h2-bold">{header}</h1>
+      <div className="mx-auto max-w-screen-sm py-5 pl-16 sm:max-w-screen-sm sm:pl-16 lg:max-w-screen-lg lg:pl-0">
+        <h1 className="h2-bold ">{header}</h1>
       </div>
-      <div className="mx-auto flex max-w-screen-sm justify-between py-10 align-top sm:max-w-screen-sm lg:max-w-screen-lg">
-        <div className="h-full">
+      <div className="mx-auto flex max-w-screen-sm flex-wrap justify-between py-10 align-top sm:max-w-screen-sm lg:max-w-screen-lg">
+        <div className="h-full px-16 sm:px-16 lg:px-0">
           <Image
             src={imageClass}
             width={500}
@@ -66,12 +66,12 @@ function SharedLayout() {
             alt="group manager"
           />
         </div>
-        <div className="flex flex-col ">
-          <div className="mb-5 h-auto w-96 rounded-md border bg-white p-5">
+        <div className="flex flex-col px-16 pt-5 sm:px-16 sm:pt-5 lg:px-0 lg:pt-0">
+          <div className="mb-5 h-auto w-[23.5rem] rounded-md border bg-white p-5 sm:w-[23.5rem] lg:w-96">
             <h2 className="h2-semibold">{heading}</h2>
             <p>{headingText}</p>
           </div>
-          <div className="h-auto w-96 rounded-md border bg-white p-5">
+          <div className="h-auto w-[23.5rem] rounded-md border bg-white p-5 sm:w-[23.5rem] lg:w-96">
             <h2 className="h3-semibold">{subHeader}</h2>
             <p>{subHeaderText}</p>
           </div>

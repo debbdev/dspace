@@ -1,19 +1,9 @@
 import React from "react";
 import Image from "next/image";
-
-type Course = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  packages: string[];
-  date: string;
-  oldPrice: string;
-  newPrice: string;
-};
+import { CourseBundle } from "@/types";
 
 type CourseBundleProps = {
-  courses: Course[];
+  courses: CourseBundle[];
   title: string;
   maxPackages?: number;
 };
@@ -22,12 +12,14 @@ function CourseBundles({ courses, title, maxPackages = 4 }: CourseBundleProps) {
   return (
     <section className="bg-neutral-200 pb-12 pt-10">
       <div className="mx-auto max-w-screen-sm sm:max-w-screen-sm lg:max-w-screen-2xl">
-        <h2 className="mb-4 text-2xl font-bold">{title}</h2>
-        <div className="flex-between flex-wrap gap-4">
+        <h2 className="mb-4 pl-5 text-2xl font-bold sm:pl-5 lg:pl-0">
+          {title}
+        </h2>
+        <div className="flex max-w-screen-sm flex-wrap items-center justify-center gap-4 px-4 sm:max-w-screen-sm sm:justify-center sm:px-4 lg:max-w-screen-2xl lg:justify-between lg:px-0">
           {courses.map((course) => (
             <div
               key={course.id}
-              className="flex h-auto w-80 flex-col rounded-md border bg-white p-5"
+              className="flex h-auto w-full flex-col rounded-md border bg-white p-5 sm:w-full lg:w-80"
             >
               <Image
                 src={course.image}
@@ -37,10 +29,14 @@ function CourseBundles({ courses, title, maxPackages = 4 }: CourseBundleProps) {
                 className="mb-4 rounded-md"
               />
               <div className="mb-2 flex items-center justify-between">
-                <h3 className="text-xl font-semibold">{course.title}</h3>
+                <h4 className="text-xl font-semibold">{course.title}</h4>
                 <div className="text-right">
-                  <h4 className="text-lg text-red-500">{course.newPrice}</h4>
+                  <h4 className="text-lg text-red-500">
+                    <span className="line-through">N</span>
+                    {course.newPrice}
+                  </h4>
                   <h4 className="text-sm text-gray-500 line-through">
+                    <span className="line-through">N</span>
                     {course.oldPrice}
                   </h4>
                 </div>

@@ -7,7 +7,6 @@ import {
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 
@@ -59,7 +58,7 @@ const MobileNav = () => {
           width={36}
           height={36}
           alt="Menu"
-          className="text-dark100_light900"
+          className="text-dark100_light900 invert-colors"
         />
       </SheetTrigger>
 
@@ -89,9 +88,9 @@ const MobileNav = () => {
             <div className=" flex flex-col gap-3 pt-4">
               <SheetClose asChild>
                 <Link href="/sign-in">
-                  <Button className="small-medium btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
+                  <button className="small-medium btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
                     <span className="primary-brand-gradient">Log In</span>
-                  </Button>
+                  </button>
                 </Link>
               </SheetClose>
             </div>

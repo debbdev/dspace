@@ -6,10 +6,10 @@ import { useTheme } from "@/context/ThemeProvider";
 function Footer() {
   const { theme } = useTheme();
   return (
-    <section className="background-light900_dark200 text-dark100_light900 p-4 shadow-light-300 dark:shadow-none">
-      <div className="flex-between mx-auto flex-wrap gap-8 py-10 max-sm:w-80 sm:gap-8  lg:w-[90rem] lg:gap-5">
+    <section className="background-light900_dark200 text-dark100_light900 shadow-light-300 p-4 dark:shadow-none">
+      <div className="flex-between mx-auto max-w-screen-sm flex-wrap gap-8 p-10   sm:max-w-screen-sm sm:gap-8  sm:px-10 lg:max-w-screen-2xl lg:gap-5 lg:px-0">
         <div className="w-full max-sm:w-full lg:w-80">
-          <h3 className="pb-3 font-bold text-primary-500">Trending Courses</h3>
+          <h3 className="text-primary-500 pb-3 font-bold">Trending Courses</h3>
           <ul className="list-none">
             <li>Data Analysis</li>
             <li>Data Analytics and Visualization</li>
@@ -17,7 +17,7 @@ function Footer() {
           </ul>
         </div>
         <div className="w-full max-sm:w-full lg:w-80">
-          <h3 className="pb-3 font-bold text-primary-500">Join Us</h3>
+          <h3 className="text-primary-500 pb-3 font-bold">Join Us</h3>
           <ul className="list-none">
             <li>Tutor Request</li>
             <li>Affliate Program</li>
@@ -25,7 +25,7 @@ function Footer() {
           </ul>
         </div>
         <div className="w-full max-sm:w-full lg:w-80">
-          <h3 className="pb-3 font-bold text-primary-500">About Us</h3>
+          <h3 className="text-primary-500 pb-3 font-bold">About Us</h3>
           <ul className="list-none">
             <li>About</li>
             <li>Blogs</li>
@@ -33,7 +33,7 @@ function Footer() {
           </ul>
         </div>
         <div className="w-full max-sm:w-full lg:w-80">
-          <h3 className="pb-3 font-bold text-primary-500">Company</h3>
+          <h3 className="text-primary-500 pb-3 font-bold">Company</h3>
           <ul className="list-none">
             <li>Contact Us</li>
             <li>Privacy Policy</li>
@@ -41,8 +41,8 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <hr className="mx-auto w-full border-solid border-black  px-10 max-sm:w-[27rem] sm:w-96 sm:px-10 lg:w-[90rem] lg:px-0" />
-      <div className="flex-between mx-auto w-full flex-wrap gap-5 p-10 max-sm:w-full sm:gap-5 sm:px-10 lg:w-[90rem] lg:gap-0 lg:px-0">
+      <hr className="mx-auto w-full max-w-screen-sm  border-solid  border-black  px-10 sm:max-w-screen-sm sm:px-10 lg:max-w-screen-2xl lg:px-0" />
+      <div className="flex-between mx-auto w-full max-w-screen-sm flex-wrap gap-5 p-10 sm:max-w-screen-sm sm:gap-5 sm:px-10  lg:max-w-screen-2xl lg:gap-0 lg:px-0">
         <div>
           <Image
             src="/assets/images/play.png"
