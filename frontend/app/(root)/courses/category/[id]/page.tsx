@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation";
 import React from "react";
 import { allCourses } from "@/constants";
-import Course from "@/components/shared/Course";
+import Course from "@/components/Shared/Course";
 
 function CategoryPage() {
   const { id } = useParams();
