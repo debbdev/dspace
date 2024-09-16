@@ -74,7 +74,7 @@ const MobileNav = () => {
             src="/assets/icons/xspace.svg"
             width={23}
             height={23}
-            alt="Tofee"
+            alt="Xspace"
           />
 
           <p className="h2-bold text-dark100_light900 font-spaceGrotesk">

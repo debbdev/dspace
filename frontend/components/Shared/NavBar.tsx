@@ -83,7 +83,7 @@ function NavBar() {
             />
           </SignedIn>
         )}
-        {/*<div className="flex-start gap-6">
+        {/* <div className="flex-start gap-6">
           <button className="bg-primary-500 h-10 rounded-md border-none px-5 py-2">
             Register
           </button>
