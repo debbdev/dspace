@@ -40,6 +40,17 @@ function SupportHero() {
       text =
         "XSpace is an online learning platform established with the primary intent of creating an interface, a light that guides those who are thirsty for entrepreneurial managerial and digital skills with or without prior experience. Coupled with the VISION to teach and propagate knowledge via sharing ideas in a more efficient learning process by creating short and efficient exercises in your course of choices.";
       break;
+    case "/become-an-instructor":
+      backgroundClass = "bg-contact-hero";
+      header = "Become An Instructor";
+      text =
+        "Utilize your expertise by teaching on XSpace, and empower thousands to reach their aspirations and unlock their potential.";
+      break;
+    case "/join-our-developers":
+      backgroundClass = "bg-contact-hero";
+      header = "Careers";
+      text = "Be a part of an innovative team";
+      break;
     default:
       return null;
   }

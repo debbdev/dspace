@@ -1,51 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { blogs } from "@/constants";
 
 function page() {
-  const blogs = [
-    {
-      id: 1,
-      time: "3 days",
-      img: "/assets/images/privacy1.jpg",
-      heading: "Your goals, Acquire it this Q2",
-      blogText:
-        "Halfway through the year already? Time flies! Maybe you&apos;re thinking about those goals you set in January. Don&apos;t worry if some got pushed aside or if you&apos;re not where you ...",
-    },
-    {
-      id: 2,
-      time: "1 week",
-      img: "/assets/images/privacy1.jpg",
-      heading: "Your goals, Acquire it this Q2",
-      blogText:
-        "Halfway through the year already? Time flies! Maybe you&apos;re thinking about those goals you set in January. Don&apos;t worry if some got pushed aside or if you&apos;re not where you ...",
-    },
-    {
-      id: 3,
-      time: "2 weeks",
-      img: "/assets/images/privacy1.jpg",
-      heading: "Your goals, Acquire it this Q2",
-      blogText:
-        "Halfway through the year already? Time flies! Maybe you&apos;re thinking about those goals you set in January. Don&apos;t worry if some got pushed aside or if you&apos;re not where you ...",
-    },
-    {
-      id: 4,
-      time: "2 weeks",
-      img: "/assets/images/privacy1.jpg",
-      heading: "Your goals, Acquire it this Q2",
-      blogText:
-        "Halfway through the year already? Time flies! Maybe you&apos;re thinking about those goals you set in January. Don&apos;t worry if some got pushed aside or if you&apos;re not where you ...",
-    },
-    {
-      id: 5,
-      time: "3 weeks",
-      img: "/assets/images/privacy1.jpg",
-      heading: "Your goals, Acquire it this Q2",
-      blogText:
-        "Halfway through the year already? Time flies! Maybe you&apos;re thinking about those goals you set in January. Don&apos;t worry if some got pushed aside or if you&apos;re not where you ...",
-    },
-  ];
-
   return (
     <section className="bg-neutral-200 pb-16 pt-28">
       <div className="mx-auto max-w-screen-sm sm:max-w-screen-sm lg:max-w-screen-lg">
@@ -96,7 +54,7 @@ function page() {
               <div className="p-5">
                 <p className="pb-3">Published {blog.time} ago</p>
                 <h3 className="h3-semibold pb-4">{blog.heading}</h3>
-                <p className="pb-5">{blog.blogText}</p>
+                <p className="pb-5">{blog.blogText.slice(1, 100)}...</p>
                 <Link href={`/blogs/blog/${blog.heading}`}>
                   <button className="brand-gradient mx-auto rounded px-6 py-3 text-white">
                     Read More

@@ -3,8 +3,12 @@ import React from "react";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeProvider";
 import MenuBar from "./MenuBar";
+import Link from "next/link";
+import { SignedIn, UserButton, SignedOut, SignInButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/clerk-react";
 
 function NavBar() {
+  const { user } = useUser();
   const { theme } = useTheme();
   return (
     <section className="background-light900_dark200 text-dark100_light900 fixed z-50 h-16 w-full">
@@ -13,32 +17,34 @@ function NavBar() {
           <div className="">
             <MenuBar />
           </div>
-          <div className="flex-start gap-1">
-            {theme === "light" ? (
-              <Image
-                src="assets/icons/xspace.svg"
-                alt="xspace"
-                width={20}
-                height={20}
-              />
-            ) : (
-              <Image
-                src="assets/icons/xspaceD.svg"
-                alt="xspace"
-                width={20}
-                height={20}
-              />
-            )}
+          <Link href={`/`}>
+            <div className="flex-start gap-1">
+              {theme === "light" ? (
+                <Image
+                  src="/assets/icons/xspace.svg"
+                  alt="xspace"
+                  width={20}
+                  height={20}
+                />
+              ) : (
+                <Image
+                  src="/assets/icons/xspaceD.svg"
+                  alt="xspace"
+                  width={20}
+                  height={20}
+                />
+              )}
 
-            <h1>
-              X<span>Space</span>
-            </h1>
-          </div>
+              <h1>
+                X<span>Space</span>
+              </h1>
+            </div>
+          </Link>
         </div>
         <div className="flex-start max-h-10 max-sm:hidden">
           <div className="flex-start background-light800_dark300 text-dark100_light900 h-10 px-4 py-2">
             <Image
-              src="assets/icons/search.svg"
+              src="/assets/icons/search.svg"
               alt="search"
               width={16}
               height={16}
@@ -55,14 +61,36 @@ function NavBar() {
             Search
           </button>
         </div>
-        <div className="flex-start gap-6">
+        {!user ? (
+          <SignedOut>
+            <SignInButton>
+              <button className="bg-primary-500 h-10 rounded-md border-none px-5 py-2">
+                Login
+              </button>
+            </SignInButton>
+          </SignedOut>
+        ) : (
+          <SignedIn>
+            <UserButton
+              appearance={{
+                elements: {
+                  avatarBox: "h-10 w-10",
+                },
+                variables: {
+                  colorPrimary: "#ff7000",
+                },
+              }}
+            />
+          </SignedIn>
+        )}
+        {/*<div className="flex-start gap-6">
           <button className="bg-primary-500 h-10 rounded-md border-none px-5 py-2">
             Register
           </button>
           <button className="bg-primary-500 h-10 rounded-md border-none px-5 py-2">
             Login
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

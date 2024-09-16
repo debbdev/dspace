@@ -1,4 +1,11 @@
-import { SidebarLink, AllCourses, CourseBundle, Category } from "@/types";
+import {
+  SidebarLink,
+  AllCourses,
+  CourseBundle,
+  Category,
+  Blogs,
+  Instructor,
+} from "@/types";
 
 export const sidebarLinks: SidebarLink[] = [
   {
@@ -16,11 +23,6 @@ export const sidebarLinks: SidebarLink[] = [
     imgURL: "/assets/icons/star.svg",
     route: "/course-bundles",
     label: "Course Bundles",
-  },
-  {
-    imgURL: "/assets/icons/users.svg",
-    route: "/dynamic-courses",
-    label: "Dynamic Courses",
   },
   {
     imgURL: "/assets/icons/star.svg",
@@ -61,6 +63,48 @@ export const sidebarLinks: SidebarLink[] = [
     imgURL: "/assets/icons/question.svg",
     route: "/freq-asked-questions",
     label: "Frequently Asked questions",
+  },
+];
+export const blogs: Blogs[] = [
+  {
+    id: 1,
+    time: "3 days",
+    img: "/assets/images/privacy1.jpg",
+    heading: "Your goals, Acquire it this Q2",
+    blogText:
+      "Halfway through the year already? Time flies! Maybe you’re thinking about those goals you set in January. Don’t worry if some got pushed aside or if you’re not where you thought you’d be. There’s still plenty of time to make this year count! Now’s a great moment to look at your goals again. Do they still excite you? Need some greasing? That’s totally fine. The key is to keep moving forward, no matter how small the steps. You know what? Learning never stops, and that’s where we come in. We’ve got it all mapped out for you, all our courses are still much more affordable! Whether you’re into trading, Graphics designs, or marketing, or want to be a YouTube star, we’ve got something for you. We believe everyone should have a chance to learn reward-able skills without breaking the bank. That’s why we’ve slashed our prices. It’s our way of saying, “Hey, we believe in you!” Think about it this could be your chance to shake things up. Maybe you want a new career, to start your own thing, or just get better at what you’re already doing. Our courses can help with all of that. Don’t let this chance slip away. Learning new stuff is like giving your future self a high-five. And trust us, in the future, you will be pretty happy about it! There’s still time to make this year awesome. With some new skills under your belt, who knows what you could achieve? It’s like having a secret weapon for success. So, what do you say? Ready to give it a shot? We’re here to cheer you on every step of the way. Remember, every expert was once a beginner. This could be the start of something amazing for you! Let’s make the rest of this year count. With a bit of learning and a lot of doing, you’ve got this! Who’s ready to level up?",
+  },
+  {
+    id: 2,
+    time: "1 week",
+    img: "/assets/images/privacy1.jpg",
+    heading: "Your goals, Achieve it this Q2",
+    blogText:
+      "Halfway through the year already? Time flies! Maybe you’re thinking about those goals you set in January. Don’t worry if some got pushed aside or if you’re not where you thought you’d be. There’s still plenty of time to make this year count! Now’s a great moment to look at your goals again. Do they still excite you? Need some greasing? That’s totally fine. The key is to keep moving forward, no matter how small the steps. You know what? Learning never stops, and that’s where we come in. We’ve got it all mapped out for you, all our courses are still much more affordable! Whether you’re into trading, Graphics designs, or marketing, or want to be a YouTube star, we’ve got something for you. We believe everyone should have a chance to learn reward-able skills without breaking the bank. That’s why we’ve slashed our prices. It’s our way of saying, “Hey, we believe in you!” Think about it this could be your chance to shake things up. Maybe you want a new career, to start your own thing, or just get better at what you’re already doing. Our courses can help with all of that. Don’t let this chance slip away. Learning new stuff is like giving your future self a high-five. And trust us, in the future, you will be pretty happy about it! There’s still time to make this year awesome. With some new skills under your belt, who knows what you could achieve? It’s like having a secret weapon for success. So, what do you say? Ready to give it a shot? We’re here to cheer you on every step of the way. Remember, every expert was once a beginner. This could be the start of something amazing for you! Let’s make the rest of this year count. With a bit of learning and a lot of doing, you’ve got this! Who’s ready to level up?",
+  },
+  {
+    id: 3,
+    time: "2 weeks",
+    img: "/assets/images/privacy1.jpg",
+    heading: "Career goals, Acquire it this Q2",
+    blogText:
+      "Halfway through the year already? Time flies! Maybe you’re thinking about those goals you set in January. Don’t worry if some got pushed aside or if you’re not where you thought you’d be. There’s still plenty of time to make this year count! Now’s a great moment to look at your goals again. Do they still excite you? Need some greasing? That’s totally fine. The key is to keep moving forward, no matter how small the steps. You know what? Learning never stops, and that’s where we come in. We’ve got it all mapped out for you, all our courses are still much more affordable! Whether you’re into trading, Graphics designs, or marketing, or want to be a YouTube star, we’ve got something for you. We believe everyone should have a chance to learn reward-able skills without breaking the bank. That’s why we’ve slashed our prices. It’s our way of saying, “Hey, we believe in you!” Think about it this could be your chance to shake things up. Maybe you want a new career, to start your own thing, or just get better at what you’re already doing. Our courses can help with all of that. Don’t let this chance slip away. Learning new stuff is like giving your future self a high-five. And trust us, in the future, you will be pretty happy about it! There’s still time to make this year awesome. With some new skills under your belt, who knows what you could achieve? It’s like having a secret weapon for success. So, what do you say? Ready to give it a shot? We’re here to cheer you on every step of the way. Remember, every expert was once a beginner. This could be the start of something amazing for you! Let’s make the rest of this year count. With a bit of learning and a lot of doing, you’ve got this! Who’s ready to level up?",
+  },
+  {
+    id: 4,
+    time: "2 weeks",
+    img: "/assets/images/privacy1.jpg",
+    heading: "Career Pathway, Acquire it this Q2",
+    blogText:
+      "Halfway through the year already? Time flies! Maybe you’re thinking about those goals you set in January. Don’t worry if some got pushed aside or if you’re not where you thought you’d be. There’s still plenty of time to make this year count! Now’s a great moment to look at your goals again. Do they still excite you? Need some greasing? That’s totally fine. The key is to keep moving forward, no matter how small the steps. You know what? Learning never stops, and that’s where we come in. We’ve got it all mapped out for you, all our courses are still much more affordable! Whether you’re into trading, Graphics designs, or marketing, or want to be a YouTube star, we’ve got something for you. We believe everyone should have a chance to learn reward-able skills without breaking the bank. That’s why we’ve slashed our prices. It’s our way of saying, “Hey, we believe in you!” Think about it this could be your chance to shake things up. Maybe you want a new career, to start your own thing, or just get better at what you’re already doing. Our courses can help with all of that. Don’t let this chance slip away. Learning new stuff is like giving your future self a high-five. And trust us, in the future, you will be pretty happy about it! There’s still time to make this year awesome. With some new skills under your belt, who knows what you could achieve? It’s like having a secret weapon for success. So, what do you say? Ready to give it a shot? We’re here to cheer you on every step of the way. Remember, every expert was once a beginner. This could be the start of something amazing for you! Let’s make the rest of this year count. With a bit of learning and a lot of doing, you’ve got this! Who’s ready to level up?",
+  },
+  {
+    id: 5,
+    time: "3 weeks",
+    img: "/assets/images/privacy1.jpg",
+    heading: "Your goals, Acquire it this Q4",
+    blogText:
+      "Halfway through the year already? Time flies! Maybe you’re thinking about those goals you set in January. Don’t worry if some got pushed aside or if you’re not where you thought you’d be. There’s still plenty of time to make this year count! Now’s a great moment to look at your goals again. Do they still excite you? Need some greasing? That’s totally fine. The key is to keep moving forward, no matter how small the steps. You know what? Learning never stops, and that’s where we come in. We’ve got it all mapped out for you, all our courses are still much more affordable! Whether you’re into trading, Graphics designs, or marketing, or want to be a YouTube star, we’ve got something for you. We believe everyone should have a chance to learn reward-able skills without breaking the bank. That’s why we’ve slashed our prices. It’s our way of saying, “Hey, we believe in you!” Think about it this could be your chance to shake things up. Maybe you want a new career, to start your own thing, or just get better at what you’re already doing. Our courses can help with all of that. Don’t let this chance slip away. Learning new stuff is like giving your future self a high-five. And trust us, in the future, you will be pretty happy about it! There’s still time to make this year awesome. With some new skills under your belt, who knows what you could achieve? It’s like having a secret weapon for success. So, what do you say? Ready to give it a shot? We’re here to cheer you on every step of the way. Remember, every expert was once a beginner. This could be the start of something amazing for you! Let’s make the rest of this year count. With a bit of learning and a lot of doing, you’ve got this! Who’s ready to level up?",
   },
 ];
 export const allCourses: AllCourses[] = [
@@ -375,6 +419,24 @@ export const category: Category[] = [
     id: 4,
     title: "3D Modelling",
     collection: "Course Bundles",
+  },
+];
+
+export const instructor: Instructor[] = [
+  {
+    img: "/assets/images/privacy1.jpg",
+    heading: "Earn as your help and empower lives",
+    text: "Share your skill here at XSpace, an avenue that helps you convert your skills to earnings, and make your skills beneficial via empowering others.",
+  },
+  {
+    img: "/assets/images/privacy1.jpg",
+    heading: "Earn as your help and empower lives",
+    text: "As an instructor with XSpace, you gain the unique privilege of engaging with international tasks and securing contracts from around the globe.",
+  },
+  {
+    img: "/assets/images/privacy1.jpg",
+    heading: "100% SUPPORT AND PATNERSHIP",
+    text: "When you join our team, we guarantee transparency in all matters, deeply value partnerships, and prioritize providing unparalleled support.",
   },
 ];
 

@@ -20,6 +20,13 @@ export interface AllCourses {
   oldPrice: string;
   newPrice: string;
 }
+export interface Blogs {
+  id: number;
+  heading: string;
+  blogText: string;
+  img: string;
+  time: string;
+}
 // export interface Course {
 //   id: number;
 //   title: string;
@@ -56,3 +63,8 @@ export interface CourseBundle {
 //   oldPrice: string;
 //   newPrice: string;
 // }
+export interface Instructor {
+  img: string;
+  heading: string;
+  text: string;
+}

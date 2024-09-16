@@ -67,8 +67,8 @@ function Hero() {
       )}
 
       {showInputDiv && (
-        <>
-          <div className="flex w-full flex-wrap gap-4  py-3 pl-5 pr-4 sm:gap-1 sm:px-10 lg:flex-nowrap lg:gap-40 lg:pl-44 lg:pr-0">
+        <div className=" mx-auto max-w-screen-sm sm:max-w-screen-sm lg:max-w-screen-2xl">
+          <div className=" flex w-full flex-wrap gap-4  py-3 px-5  sm:gap-1 sm:px-5 lg:flex-nowrap lg:gap-[11.5rem] lg:px-0">
             <div className="text-dark100_light900 flex h-10 w-full items-center py-2 sm:w-full lg:w-[30rem]">
               <div className="bg-primary-500 flex size-10 items-center justify-center rounded-l-md rounded-r-none">
                 <Image
@@ -125,14 +125,14 @@ function Hero() {
             </button>
           </div>
 
-          <p className=" w-full pl-5 pt-2 text-base sm:pl-10 lg:pl-[10.8rem]">
+          <p className=" w-full px-5 pt-2 text-base sm:px-10 lg:pl-0">
             Popular Search :
             <span className="">
               Data Analysis, Photoshop, Graphic Design, Web Development, Digital
               Marketing
             </span>
           </p>
-        </>
+        </div>
       )}
     </section>
   );

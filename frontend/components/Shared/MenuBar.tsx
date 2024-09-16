@@ -9,6 +9,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { sidebarLinks } from "@/constants";
 import { usePathname } from "next/navigation";
+import { SignedIn, UserButton, SignedOut, SignInButton } from "@clerk/nextjs";
+import { useUser } from "@clerk/clerk-react";
 
 const NavContent = () => {
   const pathname = usePathname();
@@ -50,6 +52,7 @@ const NavContent = () => {
 };
 
 const MobileNav = () => {
+  const { user } = useUser();
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -87,11 +90,28 @@ const MobileNav = () => {
           <section>
             <div className=" flex flex-col gap-3 pt-4">
               <SheetClose asChild>
-                <Link href="/sign-in">
-                  <button className="small-medium btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
-                    <span className="primary-brand-gradient">Log In</span>
-                  </button>
-                </Link>
+                {!user ? (
+                  <SignedOut>
+                    <SignInButton>
+                      <button className="small-medium btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
+                        <span className="primary-brand-gradient">Log In</span>
+                      </button>
+                    </SignInButton>
+                  </SignedOut>
+                ) : (
+                  <SignedIn>
+                    <UserButton
+                      appearance={{
+                        elements: {
+                          avatarBox: "h-10 w-10",
+                        },
+                        variables: {
+                          colorPrimary: "#ff7000",
+                        },
+                      }}
+                    />
+                  </SignedIn>
+                )}
               </SheetClose>
             </div>
           </section>

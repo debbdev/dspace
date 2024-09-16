@@ -53,19 +53,19 @@ function Footer() {
         </div>
         <div className="flex-start gap-3">
           <Image
-            src="assets/icons/facebook.svg"
+            src="/assets/icons/facebook.svg"
             width={20}
             height={20}
             alt="facebook"
           />
           <Image
-            src="assets/icons/telegram.svg"
+            src="/assets/icons/telegram.svg"
             width={20}
             height={20}
             alt="facebook"
           />
           <Image
-            src="assets/icons/instagram.svg"
+            src="/assets/icons/instagram.svg"
             width={20}
             height={20}
             alt="facebook"
@@ -75,14 +75,14 @@ function Footer() {
       <p className="flex-start mx-auto w-full gap-5 px-10 py-5 sm:w-full sm:px-10 lg:w-[90rem] lg:px-0">
         {theme === "light" ? (
           <Image
-            src="assets/icons/xspace.svg"
+            src="/assets/icons/xspace.svg"
             alt="xspace"
             width={20}
             height={20}
           />
         ) : (
           <Image
-            src="assets/icons/xspaceD.svg"
+            src="/assets/icons/xspaceD.svg"
             alt="xspace"
             width={20}
             height={20}
